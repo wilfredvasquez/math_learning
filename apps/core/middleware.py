@@ -31,9 +31,11 @@ class CorePropsMiddleware:
         global_settings = models.GlobalSettings.objects.first()
         if global_settings:
             settings = {
-                "appName": global_settings.name_app
-                if not global_settings.name_app == ""
-                else "Math Learning",
+                "appName": (
+                    global_settings.name_app
+                    if not global_settings.name_app == ""
+                    else "Math Learning"
+                ),
                 "appLogo": global_settings.get_logo(),
                 "timeExpiredSession": global_settings.session_expire_time,
                 "activeRegistration": global_settings.active_registration,

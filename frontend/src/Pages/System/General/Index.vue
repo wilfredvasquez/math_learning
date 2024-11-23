@@ -2,8 +2,8 @@
   <layout tabs-active="general">
     <template #settings-content>
       <appearance
-        :app-name="globalSettings.appName"
-        :app-logo="globalSettings.appLogo"
+        :app-name="global_settings.appName"
+        :app-logo="global_settings.appLogo"
         :success="success"
         :errors="errors"
       />
@@ -11,7 +11,7 @@
       <registration
         :success="success"
         :errors="errors"
-        :registration-active="globalSettings.activeRegistration"
+        :registration-active="global_settings.activeRegistration"
       />
     </template>
   </layout>
@@ -42,7 +42,7 @@ export default {
       type: Object,
       default: () => { }
     },
-    globalSettings: {
+    global_settings: {
       type: Object,
       default: () => { }
     },

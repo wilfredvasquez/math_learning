@@ -2,7 +2,7 @@
   <layout tabs-active="security">
     <template #settings-content>
       <security
-        :session-expire-time="globalSettings.timeExpiredSession"
+        :session-expire-time="global_settings.timeExpiredSession"
         :success="success"
         :errors="errors"
       />
@@ -33,7 +33,7 @@ export default {
       type: Object,
       default: () => { }
     },
-    globalSettings: {
+    global_settings: {
       type: Object,
       default: () => { }
     },
