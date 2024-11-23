@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
+
 import os
 from pathlib import Path
 
@@ -56,6 +57,7 @@ INSTALLED_APPS = [
     "apps.core",
     "apps.accounts",
     "apps.management",
+    "apps.learning",
 ]
 
 MIDDLEWARE = [
@@ -160,6 +162,7 @@ JS_INFO_DICT = {
         "apps.core",
         "apps.accounts",
         "apps.management",
+        "apps.learning",
     )
 }
 
@@ -195,7 +198,7 @@ MEDIA_URL = "/media/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
-JS_ROUTES_INCLUSION_LIST = ["core", "accounts", "management"]
+JS_ROUTES_INCLUSION_LIST = ["core", "accounts", "management", "learning"]
 
 # CSRF_HEADER_NAME="HTTP_X_CSRFTOKEN"
 VERSION = 2
@@ -224,7 +227,7 @@ EMAIL_PORT = env.int("EMAIL_PORT", 1025)
 EMAIL_USE_TLS = env.bool("EMAIL_USE_TLS", default=False)
 EMAIL_HOST_USER = env.str("EMAIL_HOST_USER", "")
 EMAIL_HOST_PASSWORD = env.str("EMAIL_HOST_PASSWORD", "")
-EMAIL_VERIFICATION = "optional"
+EMAIL_VERIFICATION = "none"
 
 # CORE
 MAX_SIZE_FILE = 10

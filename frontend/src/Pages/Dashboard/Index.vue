@@ -8,7 +8,7 @@
       </div>
       <div class="px-4 sm:px-6 md:px-0">
         <div class="py-6">
-          {{ $_("Welcome to") }} <span class="font-medium">math_learning</span>, {{ $page.props.auth.user.email }}!
+          {{ $_("Welcome to") }} <span class="font-medium">Math Learning</span>, {{ $page.props.auth.user.email }}!
         </div>
       </div>
     </template>
